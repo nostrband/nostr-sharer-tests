@@ -1,0 +1,22 @@
+{
+  "name": "nostr-sharer-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite --config vite-dev.config.js",
+    "build": "vite build",
+    "publish": "vite build && npm publish"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@nostr-dev-kit/ndk": "^2.10.0",
+    "browser-hbs": "file:../browser-hbs",
+    "nostr-tools": "^1.17.0",
+    "terser": "^5.31.3",
+    "typescript": "^5.5.3",
+    "vite": "^5.3.4",
+    "vite-plugin-dts": "^4.0.0-beta.1"
+  }
+}

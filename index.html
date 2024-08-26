@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script src="./dist/app.iife.js"></script>
+    <input id="id" placeholder="note1... or npub1... or naddr1..." value="note1lwg0a2nlw0nr43yrhhj8y2cewdmerlr98urvsw2ygpph9xrr8hrs5q5ljw"><br>
+    <textarea id="template" cols="80" rows="20" placeholder="HBS template">
+        <p>id: {{id}}</p>
+        <p>pubkey: {{pubkey}}</p>
+        <p>kind: {{kind}}</p>
+        <p>created_at: {{created_at}}</p>
+        <p>sig: {{sig}}</p>
+        <p>content: {{content}}</p>
+        {{#if author}}
+            <p>author: {{ author.pubkey }}</p>
+            {{#if author.profile}}
+                <p>name: {{author.profile.name}}</p>
+                <p>display_name: {{author.profile.display_name}}</p>
+            {{/if}}
+        {{/if}}
+        {{#each tags}}
+            <p>{{[0]}}: {{[1]}}</p>
+        {{/each}}        
+    </textarea><br>
+    <button id="ok">Render</button>
+    <div id="preview"></div>
+</head>
+<body>
+
+</body>
+</html>
